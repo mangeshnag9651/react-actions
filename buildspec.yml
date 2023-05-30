@@ -7,9 +7,7 @@ phases:
   build:
     commands:
       - npm run build
-
-artifacts:
-  files:
-    - '**/*'
-  discard-paths: no
-  base-directory: build
+  
+  post_build:
+    commands:
+      - aws s3 cp --recursive ./build s3://cicd-react12/
