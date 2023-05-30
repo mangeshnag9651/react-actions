@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - npm run build react-scripts --save
+      - npm install react-scripts --save
       - npm run build
   
   post_build:
