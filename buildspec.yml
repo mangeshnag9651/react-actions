@@ -10,4 +10,4 @@ phases:
   
   post_build:
     commands:
-      - aws s3 cp sync /build s3://cicd-react12
+      - aws s3 sync /build s3://cicd-react12
