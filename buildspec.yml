@@ -6,8 +6,13 @@ phases:
       - npm install
   build:
     commands:
+      - echo Build started on `date`
       - npm run build
   
   post_build:
     commands:
-      - aws s3 sync /build s3://cicd-react12
+      - echo "Deployed to s3"
+      
+ artifacts:
+   files:
+     - '**/*'
